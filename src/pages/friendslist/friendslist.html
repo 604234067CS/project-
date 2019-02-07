@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Firends List</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list *ngIf="friends">
+        <ion-item  text-wrap *ngFor="let friend of friends">
+          <ion-thumbnail item-start>
+            <img src='{{ friend.thumbnailUrl }}'>
+          </ion-thumbnail>
+          <h2>{{ friend.Name }}</h2>
+          <p>{{ friend.Lifegoals }}</p>
+          <p>{{ friend.StudentID }}</p>
+          <button ion-button clear item-end (click)="showFriends(friend.nameid)">
+            <ion-icon name="list-box"></ion-icon>&nbsp;         
+            View   
+          </button>
+        </ion-item>        
+      </ion-list>
+      <button ion-button full color="dark" (click)="goBack()">
+          Back
+        </button>
+</ion-content>

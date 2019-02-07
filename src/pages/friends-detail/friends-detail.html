@@ -1,0 +1,63 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Friends Detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-grid style="height: 100%" *ngIf="name" >
+        <ion-row justify-content-center align-items-center style="height: 100%">
+  
+              <img  height="200px" src="{{ name.thumbnailUrl }}" />
+      
+              <ion-list >
+                  <ion-item>                
+                      <strong>Name:</strong> {{ name.Name }}          
+                  </ion-item>
+                <ion-item>                
+                    <strong>StudentID:</strong> {{ name.StudentID }}
+                </ion-item>
+
+                <ion-item>                
+                    <strong>Pages:</strong> {{ name.pageCount}} pages            
+                  </ion-item>
+
+                  <ion-item>                
+                      <strong>Birthday:</strong>  {{ name.Birthday:'dd/MM/yyyy' }}      
+                  </ion-item>
+
+                  <ion-item>                
+                        <strong>color like:</strong>  {{ name.colorlike }}      
+                  </ion-item>
+
+                  <ion-item >                
+                      <strong>Movie like:</strong>  {{ name.Movielike }}      
+                  </ion-item>  
+
+                  <ion-item >                
+                  <strong>Animal like:</strong>  {{ name.Animallike }}      
+                   </ion-item>  
+
+                  <ion-item >                
+                  <strong>Hobby:</strong>  {{ name.Hobby }}      
+                  </ion-item>  
+
+                  <ion-item >                
+                  <strong>Quotes:</strong>  {{ name.Quotes }}      
+                   </ion-item>  
+
+                 <ion-item >                
+                 <strong>Lifegoals:</strong>  {{ name.Lifegoals }}      
+                  </ion-item>  
+
+              </ion-list>
+              
+              <button ion-button full color="dark" (click)="goBack()">
+                Back
+              </button>
+</ion-row>
+</ion-grid>
+</ion-content>

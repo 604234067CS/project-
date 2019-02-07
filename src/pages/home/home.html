@@ -1,14 +1,54 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+     MyComsci 
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-card>
+        <ion-card-content style="text-align:center;padding:0px" >
+
+              <ion-img width="300" height="200px" src="https://raw.githubusercontent.com/604234067CS/HomeWork-/master/imcoms.jpg" ></ion-img>
+  
+        </ion-card-content>
+      </ion-card>
+            
+
+            <ion-list>
+              <ion-item>
+                <ion-icon name="contact" item-start></ion-icon>
+                Thannaphat janla
+                <button ion-button clear icon-only item-end (click)="showFriendList('Thannaphat janla')" >
+                  <ion-icon name="open"></ion-icon>
+                </button>
+              </ion-item>
+
+              <ion-item>
+                <ion-icon name="contact" item-start></ion-icon>
+                Chareef benman
+                <button ion-button clear icon-only item-end (click)="showFriendList('Thannaphat janla')">
+                  <ion-icon name="open"></ion-icon>
+                </button>
+              </ion-item>
+
+              <ion-item>
+                <ion-icon name="contact" item-start></ion-icon>
+                pirayut khrueayos
+                <button ion-button clear icon-only item-end (click)="showFriendList('Thannaphat janla')">
+                  <ion-icon name="open"></ion-icon>
+                </button>
+              </ion-item>
+
+              <ion-item>
+                <ion-icon name="contact" item-start></ion-icon>
+                rungnapa chaiphet
+                <button ion-button clear icon-only item-end (click)="showFriendList('Thannaphat janla')" >
+                  <ion-icon name="open"></ion-icon>
+                </button>
+              </ion-item>
+
+            </ion-list>
+          
 </ion-content>
