@@ -1,14 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Firend } from '../../models/friend.model';
-import { NameproviderProvider } from '../../providers/nameprovider/nameprovider';
 
-/**
- * Generated class for the FriendsDetailPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { NameproviderProvider } from '../../providers/nameprovider/nameprovider';
+import { Friends } from '../../models/friend.model';
+
+
 
 @Component({
   selector: 'page-friends-detail',
@@ -17,7 +13,7 @@ import { NameproviderProvider } from '../../providers/nameprovider/nameprovider'
 export class FriendsDetailPage {
 
   nameId:number;
-  name:Firend;
+  name:Friends;
   
   constructor(public friendsRest:NameproviderProvider,public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -29,7 +25,7 @@ export class FriendsDetailPage {
     console.log('ionViewWillEnter');
     this.nameId=this.navParams.get("nameId");
     this.friendsRest.getFriendslist().subscribe( data =>{
-        this.name=data.filter(book=> book.bookid === this. nameId)[0];
+        this.name=data.filter(name=> name.nameid === this. nameId)[0];
       }
     );
   }

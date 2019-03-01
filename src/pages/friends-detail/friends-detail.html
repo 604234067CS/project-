@@ -18,15 +18,11 @@
                       <strong>Name:</strong> {{ name.Name }}          
                   </ion-item>
                 <ion-item>                
-                    <strong>StudentID:</strong> {{ name.StudentID }}
+                    <strong>StudentID:</strong> {{ name.StudentID }} StudentID
                 </ion-item>
 
-                <ion-item>                
-                    <strong>Pages:</strong> {{ name.pageCount}} pages            
-                  </ion-item>
-
                   <ion-item>                
-                      <strong>Birthday:</strong>  {{ name.Birthday:'dd/MM/yyyy' }}      
+                      <strong>Birthday:</strong>  {{ name.Birthday|date:'dd/MM/yyyy' }}      
                   </ion-item>
 
                   <ion-item>                

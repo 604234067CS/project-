@@ -3,7 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { NameproviderProvider } from '../../providers/nameprovider/nameprovider';
 import { FriendsDetailPage } from '../friends-detail/friends-detail';
-import { Firend } from '../../models/friend.model';
+import { Friends } from '../../models/friend.model';
+
 
 
 
@@ -13,18 +14,18 @@ import { Firend } from '../../models/friend.model';
 })
 export class FriendslistPage {
 
-  Lifegoals:string;
-  friends:Firend;
+  Name:string;
+  friends:Friends;
 
   constructor(public friendsRest:NameproviderProvider, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewWillEnter(){
     console.log('ionViewWillEnter');
-    this.Lifegoals=this.navParams.get("Lifegoals");
-    console.log(this.Lifegoals);
+    this.Name=this.navParams.get("Name");
+    console.log(this.Name);
     this.friendsRest.getFriendslist().subscribe( data =>{
-      this.friends=data.filter(friend=> friend.Lifegoals === this. Lifegoals);
+      this.friends=data.filter(friend=> friend.Name === this. Name);
          }
     );
   }

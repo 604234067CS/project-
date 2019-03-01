@@ -12,10 +12,10 @@ export class HomePage {
 
   }
  
-  showFriendList(LifegoalsName:string){
-    console.log(LifegoalsName);
+  showFriendList(NameF:string){
+    console.log(NameF);
     this.navCtrl.push( FriendslistPage, 
-      {Lifegoals:LifegoalsName}
+      {Name:NameF}
       );
 
   }
